@@ -1,6 +1,6 @@
 import { Router } from "restify-router";
-import apiMap from "./game/map";
-import apiUser from "./user/user";
+import apiMap from "./api.map";
+import apiUser from "./api.user";
 
 const API_BASE : string = "/api"
 
