@@ -4,8 +4,7 @@
     "target": "es2017",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "outDir": "build"
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules"
