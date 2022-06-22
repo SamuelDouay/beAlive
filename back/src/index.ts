@@ -1,4 +1,4 @@
-require('dotenv');
+require('dotenv').config();
 import API from "./server/api";
 import { ApiServer } from "./server/constante/index";
 

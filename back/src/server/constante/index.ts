@@ -6,7 +6,7 @@ import connectMongoDb from "../../database/connection/connect.mongodb";
 export class ApiServer {
     private restify: Server;
 
-    public start(port: string | number): void {
+    public async start(port: string | number): Promise<void> {
         this.restify = restify.createServer();
         this.restify.use(restify.plugins.queryParser());
         this.restify.use(restify.plugins.bodyParser());
@@ -15,9 +15,9 @@ export class ApiServer {
         });
 
         try {
-            connectMongoDb();
+            await connectMongoDb();
         } catch (err) {
-            console.error(`Servidor nao pode ser iniciado | ${err}`);
+            console.error(`Le serveur ne peut pas être démarré | ${err}`);
             process.exit(1);
         }
     }

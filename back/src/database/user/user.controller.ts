@@ -4,7 +4,7 @@ import { Next, Request, Response } from "restify";
 import { createUser, createUserRegister, createUserLogin } from "./user.interface";
 import { User, UserRegister } from "./user.model";
 import { userSchema, userRegisterSchema, userLoginSchema } from "./user.validations";
-require('dotenv')
+require('dotenv').config();
 
 export default class UserController {
 
