@@ -1,0 +1,19 @@
+{
+  "name": "bealive",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuelDouay/beAlive.git"
+  },
+  "author": "Samuel Douay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamuelDouay/beAlive/issues"
+  },
+  "homepage": "https://github.com/SamuelDouay/beAlive#readme"
+}
