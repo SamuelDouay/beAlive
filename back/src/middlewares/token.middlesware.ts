@@ -1,6 +1,5 @@
 import * as jwt from 'jsonwebtoken';
 import { Next, Request, Response } from 'restify';
-require('dotenv');
 
 export const checkToken = (req: Request, res: Response, next: Next) => {
     
