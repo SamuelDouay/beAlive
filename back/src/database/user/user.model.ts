@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { IUser, IUserRegister } from "./user.interface";
 
 const UserSchema = new mongoose.Schema({
-    email: { type:String, require: true} ,
+    email: { type: String, require: true} ,
     name: { type: String, require: true },
     firstname: { type: String, require: true },
     age: { type: Number, require: true },
