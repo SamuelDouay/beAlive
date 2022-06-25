@@ -1,5 +1,5 @@
 import { Router } from "restify-router";
-import UserController from "../../database/user/user.controller";
+import UserController from "../../database/messagerie/user/user.controller";
 import { checkToken } from "../../middlewares/token.middlesware";
 
 const apiUser: Router = new Router();
