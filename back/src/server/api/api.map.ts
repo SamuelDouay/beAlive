@@ -12,6 +12,6 @@ apiMap.group("/map", (router: Router) => {
         res.send({ status: 'success' });
         next();
     });
-})
+});
 
 export default apiMap;

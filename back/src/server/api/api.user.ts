@@ -14,11 +14,11 @@ apiUser.group("/user", (router: Router) => {
 
     router.post("/", checkToken, UserController.insert);
 
-    router.post("/:id", checkToken, UserController.update);
+    router.put("/:id", checkToken, UserController.update);
 
     router.post("/register", UserController.register);
 
     router.post("/login", UserController.login);
-})
+});
 
 export default apiUser;
