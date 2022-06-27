@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec ts-node src/index.ts",
     "start-server": "node build/index.js",
-    "build":"webpack"
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Samuel Douay",
   "license": "ISC",
@@ -37,6 +37,9 @@
     "@types/mongoose": "^5.11.97",
     "@types/restify": "^8.5.4",
     "@types/typescript": "^2.0.0",
-    "@types/yup": "^0.29.14"
+    "@types/yup": "^0.29.14",
+    "ts-loader": "^9.3.1",
+    "tslint-loader": "^3.5.4",
+    "webpack-node-externals": "^3.0.0"
   }
 }
