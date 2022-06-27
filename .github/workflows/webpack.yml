@@ -17,8 +17,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 17.x
-      working-directory: ./back
-      
-    - run: npm install
     
-    - run: npm run build
+    - name: Install Node Dependencies
+      working-directory: ./back
+      run: npm install
+      
+    - name: Build project
+      working-directory: ./back
+      run: npm run build
