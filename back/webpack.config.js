@@ -11,7 +11,7 @@ module.exports = [
     module: {
       rules: [
         {
-          test: /\.ts$/,
+          test: /\.txs?$/,
           exclude: /node_modules/,
           loader: "ts-loader",
           options: {
@@ -22,7 +22,7 @@ module.exports = [
       ],
     },
     resolve: {
-      extensions: [".ts", ".js"],
+      extensions: [".ts", ".tsx", ".js"],
     },
     output: {
       path: path.resolve(__dirname, "build"),
