@@ -4,7 +4,7 @@ import { checkToken } from "../../middlewares/token.middlesware";
 
 const apiConversation: Router = new Router();
 
-apiConversation.group('/conv', (router: Router) => {
+apiConversation.group('/conversation', (router: Router) => {
 
     router.get("/", checkToken, ConversationController.getAll);
 

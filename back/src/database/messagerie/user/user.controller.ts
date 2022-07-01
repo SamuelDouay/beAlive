@@ -93,13 +93,13 @@ export default class UserController {
 
     public static async get(req: Request, res: Response, next: Next) {
         try {
-            let users: any;
 
-            if (req.query.id) {
-                users = await User.findOne({ _id: req.query.id });
-            } else {
-                users = await User.find();
+            if (!req.params.id) {
+                res.send(404, { errors: 'L\'identifiant de l\'utilisateur doit être transmis' });
+                return next();
             }
+            
+            const users = await User.findOne({ _id: req.query.id });
 
             res.send(200, { users });
             return next();
@@ -168,7 +168,7 @@ export default class UserController {
 
         try {
             if (!req.params.id) {
-                res.send(400, { errors: 'L\'identifiant de l\'utilisateur doit être transmis' });
+                res.send(404, { errors: 'L\'identifiant de l\'utilisateur doit être transmis' });
                 return next();
             }
             
@@ -187,7 +187,7 @@ export default class UserController {
     public static async delete(req: Request, res: Response, next: Next) {
         try {
             if (!req.params.id) {
-                res.send(400, { errors: 'L\'identifiant de l\'utilisateur doit être transmis' });
+                res.send(404, { errors: 'L\'identifiant de l\'utilisateur doit être transmis' });
                 return next();
             }
 
