@@ -12,7 +12,7 @@ apiGroupe.group('/conv', (router: Router) => {
 
     router.del("/:id", checkToken, GroupeController.delete);
 
-    router.post("/", checkToken, GroupeController.create);
+    router.post("/", checkToken, GroupeController.insert);
 
     router.put("/:id", GroupeController.update);
 });
