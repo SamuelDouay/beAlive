@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "module": "commonjs",
     "target": "es2017",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "moduleResolution": "node"
   },
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules",
+    "build"
+  ],
+   "include": [
+     "src/**/*.ts"
+, "src/model/games/Map/index.ts"   ],
 }

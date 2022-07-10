@@ -11,17 +11,18 @@ module.exports = [
     module: {
       rules: [
         {
-          test: /\.ts$/,
           exclude: /node_modules/,
+          test: /\.tsx?$/,
           loader: "ts-loader",
           options: {
             configFile: "tsconfig.json",
+            projectReferences: true
           },
         },
       ],
     },
     resolve: {
-      extensions: [".ts", ".js"],
+      extensions: [".ts", ".tsx", ".js"],
     },
     output: {
       path: path.resolve(__dirname, "build"),
