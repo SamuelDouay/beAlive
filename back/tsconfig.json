@@ -14,5 +14,5 @@
   ],
    "include": [
      "src/**/*.ts"
-   ],
+, "src/model/games/Map/index.ts"   ],
 }
