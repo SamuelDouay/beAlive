@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: Build Project
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  back:
     runs-on: ubuntu-latest
    
     steps:
@@ -24,4 +24,22 @@ jobs:
       
     - name: Build project
       working-directory: ./back
+      run: npm run build
+  front:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js 17.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 17.x
+    
+    - name: Install Node Dependencies
+      working-directory: ./front
+      run: npm install
+      
+    - name: Build project
+      working-directory: ./front
       run: npm run build
