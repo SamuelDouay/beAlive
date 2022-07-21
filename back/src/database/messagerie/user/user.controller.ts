@@ -82,7 +82,7 @@ export default class UserController {
             
             jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
                 if (err) throw err;
-                res.send(200, { message: 'User validé', token });
+                res.send(200, { userId: user.id, token: token });
                 return next();
             });
             } catch (err) {
