@@ -2,14 +2,16 @@
 
 FROM node:17.3.0
 
-ENV NODE_ENV=production
-
 WORKDIR /app
 
-COPY ["package.json", "package-lock.json*", "./"]
+COPY package*.json ./
 
 RUN npm install --production
 
 COPY . .
 
-CMD [ "node", "server.js" ]
+RUN npm run build
+
+EXPOSE 8080
+
+CMD [ "node", "build/index.js" ]
